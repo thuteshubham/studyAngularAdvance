@@ -29,9 +29,12 @@ export class SocketService {
    }
 
    public onlineUserList=()=>{
+    console.log("Online user list from socket service");
      return Observable.create((observer)=>{
-       this.socket.on('onlineUserList',(userList)=>{
+       this.socket.on('online-user-list',(userList)=>{
+        console.log("onlone user list socket service 2");
          observer.next(userList);
+         
        });
      });
    }
