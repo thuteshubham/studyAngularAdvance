@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   console.log(data);
+  console.log("Hello there ");
   this.appService.loginFunction(data).subscribe(
     response=>{
       console.log(response);
